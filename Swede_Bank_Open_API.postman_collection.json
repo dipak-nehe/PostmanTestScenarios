@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "fb947798-f65a-4bd4-9b5c-ab25199c0720",
+		"name": "Swede_Bank_Open_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Features",
+			"item": [
+				{
+					"name": "FX_Rates",
+					"item": [
+						{
+							"name": "FXPairs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"EURNOK\");",
+											"});",
+											"",
+											"pm.test(\"Your test name\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    var responseBody = [",
+											"    \"EURNOK\",",
+											"    \"DKKNOK\",",
+											"    \"SARSEK\",",
+											"    \"JPYDKK\",",
+											"    \"NOKDKK\",",
+											"    \"SEKDKK\",",
+											"    \"USDILS\",",
+											"    \"AUDJPY\",",
+											"    \"ZARNOK\",",
+											"    \"SGDHKD\",",
+											"    \"PLNHUF\",",
+											"    \"GBPSEK\",",
+											"    \"INRSEK\",",
+											"    \"USDSEK\",",
+											"    \"JPYHKD\",",
+											"    \"EURSEK\",",
+											"    \"AUDUSD\",",
+											"    \"NZDDKK\",",
+											"    \"USDHKD\",",
+											"    \"BGNNOK\",",
+											"    \"INRNOK\",",
+											"    \"AUDCAD\",",
+											"    \"GBPJPY\",",
+											"    \"CZKSEK\",",
+											"    \"MXNNOK\",",
+											"    \"GBPNOK\",",
+											"    \"CADCHF\",",
+											"    \"AUDDKK\",",
+											"    \"EURAED\",",
+											"    \"EURBGN\",",
+											"    \"CHFSEK\",",
+											"    \"EURCNH\",",
+											"    \"RONSEK\",",
+											"    \"DKKSEK\",",
+											"    \"NZDSEK\",",
+											"    \"HKDNOK\",",
+											"    \"GBPCAD\",",
+											"    \"CHFDKK\",",
+											"    \"HUFNOK\",",
+											"    \"AEDSEK\",",
+											"    \"NZDNOK\",",
+											"    \"HKDSEK\",",
+											"    \"AEDNOK\",",
+											"    \"CNHDKK\",",
+											"    \"CADCNH\",",
+											"    \"GBPNZD\",",
+											"    \"CADJPY\",",
+											"    \"SGDNOK\",",
+											"    \"JPYSEK\",",
+											"    \"USDCHF\",",
+											"    \"CHFJPY\",",
+											"    \"EURSAR\",",
+											"    \"EURSGD\",",
+											"    \"PLNNOK\",",
+											"    \"AUDCNH\",",
+											"    \"USDRUB\",",
+											"    \"EURCZK\",",
+											"    \"HUFSEK\",",
+											"    \"NZDCHF\",",
+											"    \"USDHUF\",",
+											"    \"RONNOK\",",
+											"    \"USDCAD\",",
+											"    \"ILSNOK\",",
+											"    \"GBPCHF\",",
+											"    \"AUDSEK\",",
+											"    \"GBPCNH\",",
+											"    \"CNHNOK\",",
+											"    \"BGNSEK\",",
+											"    \"EURDKK\",",
+											"    \"EURNZD\",",
+											"    \"EURMXN\",",
+											"    \"USDPLN\",",
+											"    \"EURCAD\",",
+											"    \"CZKNOK\",",
+											"    \"USDDKK\",",
+											"    \"NZDCNH\",",
+											"    \"CADDKK\",",
+											"    \"USDSGD\",",
+											"    \"USDRON\",",
+											"    \"USDCNH\",",
+											"    \"NZDCAD\",",
+											"    \"GBPSGD\",",
+											"    \"ZARSEK\",",
+											"    \"GBPUSD\",",
+											"    \"EURZAR\",",
+											"    \"JPYNOK\",",
+											"    \"AUDNOK\",",
+											"    \"EURAUD\",",
+											"    \"PLNSEK\",",
+											"    \"EURHKD\",",
+											"    \"EURJPY\",",
+											"    \"RUBNOK\",",
+											"    \"NZDJPY\",",
+											"    \"CNHSEK\",",
+											"    \"SGDSEK\",",
+											"    \"EURINR\",",
+											"    \"THBNOK\",",
+											"    \"USDTHB\",",
+											"    \"CHFCNH\",",
+											"    \"NOKSEK\",",
+											"    \"RUBSEK\",",
+											"    \"USDCZK\",",
+											"    \"ILSSEK\",",
+											"    \"USDMXN\",",
+											"    \"EURGBP\",",
+											"    \"EURCHF\",",
+											"    \"USDZAR\",",
+											"    \"CADNOK\",",
+											"    \"EURHUF\",",
+											"    \"MXNSEK\",",
+											"    \"EURRUB\",",
+											"    \"EURRON\",",
+											"    \"SEKNOK\",",
+											"    \"EURTHB\",",
+											"    \"CHFNOK\",",
+											"    \"USDJPY\",",
+											"    \"USDSAR\",",
+											"    \"CADSEK\",",
+											"    \"GBPDKK\",",
+											"    \"GBPAUD\",",
+											"    \"AUDNZD\",",
+											"    \"NZDUSD\",",
+											"    \"USDNOK\",",
+											"    \"AUDCHF\",",
+											"    \"EURILS\",",
+											"    \"EURUSD\",",
+											"    \"EURPLN\",",
+											"    \"SARNOK\",",
+											"    \"THBSEK\"",
+											"]",
+											"",
+											"    pm.expect(JSON.stringify(jsonData)).is.to.equal(JSON.stringify(responseBody)); ",
+											"",
+											"    ",
+											"});",
+											"",
+											"pm.test(\"Status code name has string\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-request-id",
+										"value": "2",
+										"description": "unique number",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "text/json;charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://psd2.api.swedbank.com:443/partner/sandbox/v1/fx/indicative-rate/currencypairs?app-id={{api-id}}",
+									"protocol": "https",
+									"host": [
+										"psd2",
+										"api",
+										"swedbank",
+										"com"
+									],
+									"port": "443",
+									"path": [
+										"partner",
+										"sandbox",
+										"v1",
+										"fx",
+										"indicative-rate",
+										"currencypairs"
+									],
+									"query": [
+										{
+											"key": "app-id",
+											"value": "{{api-id}}",
+											"description": "API Key for swede bank API"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "This is top level folder denoting features under this collection"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-id",
+			"value": "l7a77fa554915e4443b7a5e4b2db26d79d"
+		}
+	]
+}
