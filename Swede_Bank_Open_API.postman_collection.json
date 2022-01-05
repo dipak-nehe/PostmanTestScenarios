@@ -276,6 +276,14 @@
 											"    pm.expect(jsonData.midRate).to.be.a(\"number\");",
 											"    //pm.expect(jsonData.currencyPair).to.be.a(\"string\");",
 											"",
+											"});",
+											"",
+											"",
+											"pm.test(\"ccypair is string\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.currencyPair).to.be.a(\"string\");",
+											"    //pm.expect(jsonData.currencyPair).to.be.a(\"string\");",
+											"",
 											"});"
 										],
 										"type": "text/javascript"
